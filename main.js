@@ -81,3 +81,20 @@ function goPrevPage() {
         currentLocation--;
     }
 }
+
+window.onload = function() {
+    const paragraphs = document.querySelectorAll('.message p');
+    
+    let delay = 0; // Initial delay
+    
+    paragraphs.forEach((p, index) => {
+      setTimeout(() => {
+        p.style.display = 'block';  // Show the paragraph
+        p.style.animation = 'fadeInOut 5s ease-in-out forwards'; // Apply fadeInOut animation
+      }, delay);
+      
+      // Increase the delay by 6 seconds for each <p> element (adjust based on animation speed)
+      delay += 6000; // 6 seconds (5 seconds for animation + 1 second delay before next fade)
+    });
+  };
+  
