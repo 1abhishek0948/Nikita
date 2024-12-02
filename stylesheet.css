@@ -158,3 +158,31 @@ i {
     background-position: center; /* Centers the image */
     background-size: 98%;
 }
+
+.container {
+    text-align: center;
+  }
+  
+  .message p {
+    opacity: 0;
+    animation: fadeInOut 5s ease-in-out forwards;
+    display: none;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      display: block;
+    }
+    10% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
